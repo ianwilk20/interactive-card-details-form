@@ -1,61 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
 
-  <link rel="stylesheet" href="./index.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive card details form</title>
+        <link rel="stylesheet" href="./index.css" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
 
-</head>
-<body>
-  
-  <main>
-    <section class="sec-card-area">
-      <img class="sec-card-area-background">
-      <img class="sec-card-area-back">
-      <img class="sec-card-area-front">
-    </section>
-    <section>
-      <form>
+        <title>Frontend Mentor | Interactive card details form</title>
+    </head>
+    <body>
+        <main>
+            <section class="sec-card-area">
+                <img
+                    class="sec-card-area-background"
+                    alt="Image of the back of a credit card"
+                />
+                <section class="sec-card-area-tmp">
+                    <section class="sec-card-area-back">
+                        <p>000</p>
+                    </section>
+                    <section
+                        class="sec-card-area-front"
+                        alt="Image of the front of a credit card"
+                    >
+                        <section class="sec-card-area-front-top">
+                            <div class="circle-filled"></div>
+                            <div class="circle-outlined"></div>
+                        </section>
+                        <section class="sec-card-area-front-middle">
+                            <p>0000 0000 0000 0000</p>
+                        </section>
+                        <section class="sec-card-area-front-bottom">
+                            <p>Jane Appleseed</p>
+                            <p>00/00</p>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="sec-form-area">
+                <form>
+                    <section class="sec-form-area-cardholder">
+                        <label for="cardholder-name">cardholder name</label>
+                        <input
+                            id="cardholder-name"
+                            type="text"
+                            placeholder="e.g. Jane Appleseed"
+                        />
+                    </section>
+                    <section class="sec-form-area-card-number">
+                        <label for="card-number">card number</label>
+                        <input
+                            id="card-number"
+                            type="number"
+                            placeholder="e.g. 1234 5678 9123 0000"
+                        />
+                    </section>
+                    <section class="sec-form-area-card-date-cvv">
+                        <section class="sec-form-area-card-date">
+                            <span>exp. date (mm/yy)</span>
+                            <section class="sec-form-area-card-date-inputs">
+                                <input
+                                    id="exp-date-month"
+                                    aria-label="Month of expiration. Two digits"
+                                    type="text"
+                                    placeholder="MM"
+                                />
+                                <input
+                                    id="exp-date-year"
+                                    aria-label="Year of expiration. Last two digits"
+                                    type="text"
+                                    placeholder="YY"
+                                />
+                            </section>
+                        </section>
+                        <section class="sec-form-area-card-cvv">
+                            <label for="cvv">cvv</label>
+                            <input
+                                id="cvv"
+                                type="number"
+                                placeholder="e.g. 123"
+                            />
+                        </section>
+                    </section>
+                    <button class="form-submit-btn">Confirm</button>
+                </form>
+            </section>
+        </main>
 
-        <button>Confirm</button>
-      </form>
-    </section>
+        <!-- Completed state start -->
 
-  </main>
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+        <!-- Thank you! We've added your card details Continue -->
 
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/ianwilk20">Ian Wilkinson</a>.
-  </div>
-</body>
+        <div class="attribution">
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor</a
+            >. Coded by
+            <a href="https://github.com/ianwilk20">Ian Wilkinson</a>.
+        </div>
+    </body>
 </html>

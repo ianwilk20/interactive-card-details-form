@@ -1,6 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
-  
+.space-grotesk {
+    font-family: 'Space Grotesk', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
 
-.attribution { font-size: 11px; text-align: center; }
+:root {
+    font-family: 'Space Grotesk';
+    font-size: 18px;
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+    --red: hsl(0, 100%, 66%);
+}
 
-.attribution a { color: hsl(228, 45%, 44%); }
+body {
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (width <= 900px) {
+    .sec-card-area {
+        display: flex;
+        justify-content: center;
+    }
+
+    .sec-card-area-background {
+        content: url('../assets/images/bg-main-mobile.png');
+        min-width: 100%;
+        max-height: 20rem;
+    }
+
+    /* .sec-card-area-back {
+        background-image: url(../assets/images/bg-card-back.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        height: 8rem;
+        width: 14.59rem;
+        padding: 1.5rem 2.5rem;
+        box-sizing: border-box;
+        position: absolute;
+        top: 5%;
+        right: 4%;
+    } */
+
+    .sec-card-area-back {
+        background-image: url(../assets/images/bg-card-back.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        height: 8rem;
+        width: 14.59rem;
+        padding: 1rem;
+        position: absolute;
+        /* top: 5%;
+        right: 4%; */
+        border-radius: 0.5rem;
+        background-position: center;
+        transform: translateY(15%);
+    }
+
+    .sec-card-area-back > p {
+        color: var(--white);
+        font-size: 60%;
+        margin-top: 0.6rem;
+        letter-spacing: 0.1rem;
+    }
+
+    /* .sec-card-area-front {
+        background-image: url(../assets/images/bg-card-front.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: flex;
+        flex-direction: column;
+        height: 8.5rem;
+        width: 14.59rem;
+        position: absolute;
+        top: 18%;
+        left: 4%;
+        padding: 1rem;
+    } */
+
+    .sec-card-area-front {
+        background-image: url(../assets/images/bg-card-front.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        height: 8rem;
+        width: 14.59rem;
+        position: absolute;
+        /* top: 30%;
+        left: 4%; */
+        padding: 1rem;
+        justify-content: center;
+        /* width: auto; */
+        /* background-size: 50%; */
+        border-radius: 0.5rem;
+        transform: translateY(72%);
+    }
+
+    .sec-card-area-front-top {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        gap: 0.5rem;
+    }
+
+    .circle-filled {
+        height: 30px;
+        width: 30px;
+        background-color: var(--white);
+        border-radius: 50%;
+    }
+
+    .circle-outlined {
+        height: 12.5px;
+        width: 12.5px;
+        border: var(--white) 1px solid;
+        border-radius: 50%;
+    }
+
+    .sec-card-area-front {
+        color: var(--white);
+    }
+
+    .sec-card-area-front-middle {
+        display: flex;
+        align-items: flex-end;
+        flex: 2;
+    }
+
+    .sec-card-area-front-middle > p {
+        font-weight: 500;
+        margin: 0;
+        letter-spacing: 0.1rem;
+    }
+
+    .sec-card-area-front-bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex: 1;
+        font-size: 70%;
+        align-items: flex-end;
+        font-weight: 100;
+        text-transform: uppercase;
+        letter-spacing: 0.05rem;
+    }
+
+    .sec-card-area-front-bottom > p {
+        margin: 0;
+    }
+
+    .sec-form-area {
+        margin-top: 8rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem;
+        max-width: 20rem;
+    }
+
+    form label,
+    form span {
+        text-transform: uppercase;
+        font-size: 70%;
+        color: var(--very-dark-violet);
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .sec-form-area-cardholder,
+    .sec-form-area-card-number {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+
+    .sec-form-area-card-date-cvv {
+        display: flex;
+        gap: 0.35rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #cardholder-name,
+    #card-number {
+        width: 100%;
+    }
+
+    #exp-date-month,
+    #exp-date-year {
+    }
+
+    .sec-form-area-card-date-inputs {
+        display: flex;
+        flex-direction: row;
+        gap: 0.35rem;
+        width: 100%;
+    }
+
+    .sec-form-area-card-date-inputs > input,
+    .sec-form-area-card-cvv > input {
+        width: 100%;
+    }
+
+    .sec-form-area-card-date,
+    .sec-form-area-card-cvv {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+        width: 50%;
+        justify-content: flex-end;
+    }
+
+    form input {
+        border: var(--light-grayish-violet) 1px solid;
+        border-radius: 0.4rem;
+        height: 2.5rem;
+        font-size: 100%;
+        padding: 0.5rem 1rem;
+        box-sizing: border-box;
+    }
+
+    form input::placeholder {
+        font-family: 'Space Grotesk';
+        font-weight: 400;
+        color: var(--light-grayish-violet);
+    }
+
+    .form-submit-btn {
+        background-color: var(--very-dark-violet);
+        color: var(--white);
+        height: 3rem;
+        border-radius: 0.4rem;
+        border: none;
+        font-size: 90%;
+        font-family: inherit;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
