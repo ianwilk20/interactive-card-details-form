@@ -22,17 +22,63 @@ body {
     margin: 0;
 }
 
+@media screen and (width <= 375px) {
+    .sec-card-area {
+        max-height: 15rem;
+        height: 15rem;
+    }
+
+    .card-area-tmp {
+        min-width: 90%;
+    }
+
+    .sec-card-area-back,
+    .sec-card-area-front {
+        height: 7.5rem;
+        width: 13.68rem;
+    }
+}
+
+@media screen and (375px < width < 500px) {
+    .sec-card-area {
+        max-height: 20rem;
+        height: 20rem;
+    }
+
+    .card-area-tmp {
+        min-width: 20rem;
+    }
+
+    .sec-card-area-bac,
+    .sec-card-area-front {
+        height: 8rem;
+        width: 14.59rem;
+    }
+}
+
 @media screen and (width <= 900px) {
     .sec-card-area {
         display: flex;
         justify-content: center;
+        align-items: center;
+        min-width: 100%;
+        flex-direction: column;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(../assets/images/bg-main-mobile.png);
     }
 
-    .sec-card-area-background {
+    .card-area-tmp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* .sec-card-area-background {
         content: url('../assets/images/bg-main-mobile.png');
         min-width: 100%;
         max-height: 20rem;
-    }
+    } */
 
     /* .sec-card-area-back {
         background-image: url(../assets/images/bg-card-back.png);
@@ -51,7 +97,7 @@ body {
         right: 4%;
     } */
 
-    .sec-card-area-back {
+    /* .sec-card-area-back {
         background-image: url(../assets/images/bg-card-back.png);
         background-repeat: no-repeat;
         background-size: cover;
@@ -63,11 +109,27 @@ body {
         width: 14.59rem;
         padding: 1rem;
         position: absolute;
-        /* top: 5%;
-        right: 4%; */
         border-radius: 0.5rem;
         background-position: center;
         transform: translateY(15%);
+    } */
+
+    .sec-card-area-back {
+        background-image: url(../assets/images/bg-card-back.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        /* height: 8rem;
+        width: 14.59rem; */
+        padding: 1rem;
+        border-radius: 0.5rem;
+        background-position: center;
+        align-self: flex-end;
+        transform: translateY(30px);
+        z-index: 1;
     }
 
     .sec-card-area-back > p {
@@ -91,7 +153,7 @@ body {
         padding: 1rem;
     } */
 
-    .sec-card-area-front {
+    /* .sec-card-area-front {
         background-image: url(../assets/images/bg-card-front.png);
         background-repeat: no-repeat;
         background-size: cover;
@@ -100,14 +162,25 @@ body {
         height: 8rem;
         width: 14.59rem;
         position: absolute;
-        /* top: 30%;
-        left: 4%; */
         padding: 1rem;
         justify-content: center;
-        /* width: auto; */
-        /* background-size: 50%; */
         border-radius: 0.5rem;
         transform: translateY(72%);
+    } */
+
+    .sec-card-area-front {
+        background-image: url(../assets/images/bg-card-front.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        /* height: 8rem;
+        width: 14.59rem; */
+        padding: 1rem;
+        justify-content: center;
+        border-radius: 0.5rem;
+        align-self: flex-start;
+        z-index: 2;
     }
 
     .sec-card-area-front-top {
@@ -145,6 +218,7 @@ body {
         font-weight: 500;
         margin: 0;
         letter-spacing: 0.1rem;
+        font-size: 90%;
     }
 
     .sec-card-area-front-bottom {
@@ -152,7 +226,7 @@ body {
         flex-direction: row;
         justify-content: space-between;
         flex: 1;
-        font-size: 70%;
+        font-size: 60%;
         align-items: flex-end;
         font-weight: 100;
         text-transform: uppercase;
@@ -164,6 +238,8 @@ body {
     }
 
     .sec-form-area {
+        display: flex;
+        justify-content: center;
         margin-top: 8rem;
     }
 
@@ -192,7 +268,7 @@ body {
         gap: 0.35rem;
     }
 
-    .sec-form-area-card-date-cvv {
+    .sec-form-area-card-date-cvc {
         display: flex;
         gap: 0.35rem;
         margin-bottom: 0.5rem;
@@ -215,12 +291,12 @@ body {
     }
 
     .sec-form-area-card-date-inputs > input,
-    .sec-form-area-card-cvv > input {
+    .sec-form-area-card-cvc > input {
         width: 100%;
     }
 
     .sec-form-area-card-date,
-    .sec-form-area-card-cvv {
+    .sec-form-area-card-cvc {
         display: flex;
         flex-direction: column;
         gap: 0.35rem;
